@@ -1,0 +1,12 @@
+                         : : : : : LOGIN DETAILS : : : : : 
+
+ADMIN PANEL LOGIN:
+
+user : twimy.artim@gmail.com	
+Password: password
+
+USER LOGIN:
+
+Username: artim@dauti.com
+Password: code0 ose password
+
