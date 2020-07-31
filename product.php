@@ -76,13 +76,13 @@
 		            		</form-->
 		            	</div>
 		            	<div class="col-sm-6">
-		            		<h1 class="page-header"><?php echo $product['prodname']; ?></h1>
+						<h6><b>Category:</b> <a href="category.php?category=<?php echo $product['cat_slug']; ?>"><?php echo $product['catname']; ?></a></h6>
+		            		<h1 style="color: blue; size: 30px; text-transform: uppercase;" class=""><?php echo $product['prodname']; ?></h1>
 		            		<!--
 							<h3><b>&#36; <?php echo number_format($product['price'], 2); ?></b></h3>
 							-->
-		            		<h3><b>Category:</b> <a href="category.php?category=<?php echo $product['cat_slug']; ?>"><?php echo $product['catname']; ?></a></h3>
-		            		<h5><b>Description:</b></h5>
-		            		<h5><?php echo $product['description']; ?></h5>
+		            		<!--h5><b>Description:</b></h5-->
+		            		<h5 style="margin-left: 10px;"><?php echo $product['description']; ?></h5>
 		            	</div>
 		            </div>
 		            <br>

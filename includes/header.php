@@ -94,6 +94,9 @@
       height: 100px;
     }
 
-    </style>
+    body {
+      background: #666666;
+    }
+</style>
 
 </head>

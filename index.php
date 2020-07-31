@@ -1,17 +1,67 @@
 <?php include 'includes/session.php'; ?>
 <?php include 'includes/header.php'; ?>
-<body class="hold-transition skin-blue layout-top-nav">
+<style>
+	.welcome {
+	  background: 50% 100%/50% 50% no-repeat radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+	  -webkit-background-clip: text;
+	  background-clip: text;
+	  color: transparent;
+	  font-size: 10vw;
+	  font-family: "Source Sans Pro", sans-serif;
+	  -webkit-animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+	          animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear infinite 2000ms;
+	}
+	@-webkit-keyframes reveal {
+	  80% {
+	    letter-spacing: 8px;
+	  }
+	  100% {
+	    background-size: 300% 300%;
+	  }
+	}
+	@keyframes reveal {
+	  80% {
+	    letter-spacing: 8px;
+	  }
+	  100% {
+	    background-size: 300% 300%;
+	  }
+	}
+	@-webkit-keyframes glow {
+	  40% {
+	    text-shadow: 0 0 8px #fff;
+	  }
+	}
+	@keyframes glow {
+	  40% {
+	    text-shadow: 0 0 8px #fff;
+	  }
+	}
+
+	body {
+	}
+</style>
+<body style="" class="hold-transition skin-blue layout-top-nav">
+
 <div class="wrapper">
-
 	<?php include 'includes/navbar.php'; ?>
-	 
 	  <div class="content-wrapper">
-	    <div class="container">
+	  <!--
+	  <div id="vid">
+	  	<video autoplay muted loop src="videos/unifrigo.mp4"></video>
+	  </div>
+	-->
+	  <div style="background: #b3b3ff;" class="jumbotron jumbotron-fluid text-center">
+		<div class="welcome">
+			<b>UNI</b>FRIGO
+		</div>
+		</div>
 
+		<div class="container">
 	      <!-- Main content -->
 	      <section class="content">
 	        <div class="row">
-			
+				
 	        	<div class="col-sm-9">
 	        		<?php
 	        			if(isset($_SESSION['error'])){
@@ -68,10 +118,10 @@
 		                  <span class="fa fa-angle-right"></span>
 		                </a>
 		            </div>
-					<div style="margin-top: 30px;" class="embed-responsive embed-responsive-16by9">
-  						<iframe class="embed-responsive-item" src="videos/unifrigo.mp4"></iframe>
-					</div>
-					
+						<div style="margin-top: 30px;" class="embed-responsive embed-responsive-16by9">
+  							<iframe class="embed-responsive-item" src="videos/unifrigo.mp4"></iframe>
+						</div>
+
 		       		<?php
 		       			$month = date('m');
 		       			$conn = $pdo->open();
@@ -106,14 +156,12 @@
 						$pdo->close();
 
 		       		?> 
-
 	        	</div>
 	        	<div class="col-sm-3">
 	        		<?php include 'includes/sidebar.php'; ?>
 	        	</div>
 	        </div>
 	      </section>
-	     
 	    </div>
 	  </div>
   

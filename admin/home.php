@@ -100,7 +100,7 @@
             <div class="icon">
               <i class="fa fa-barcode"></i>
             </div>
-            <a href="student.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="products.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -121,7 +121,47 @@
             <div class="icon">
               <i class="fa fa-users"></i>
             </div>
-            <a href="return.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="users.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-blue">
+            <div class="inner">
+              <?php
+                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM category");
+                $stmt->execute();
+                $prow =  $stmt->fetch();
+
+                echo "<h3>".$prow['numrows']."</h3>";
+              ?>
+          
+              <p>Categories</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-barcode"></i>
+            </div>
+            <a href="category.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <?php
+                $stmt = $conn->prepare("SELECT *, COUNT(*) AS numrows FROM users WHERE type > 0");
+                $stmt->execute();
+                $prow =  $stmt->fetch();
+
+                echo "<h3>".$prow['numrows']."</h3>";
+              ?>
+          
+              <p>Administrators</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-barcode"></i>
+            </div>
+            <a href="users.php" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->

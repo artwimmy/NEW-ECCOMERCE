@@ -1,5 +1,5 @@
 <header class="main-header">
-  <nav style="background: #9999ff;" class="navbar navbar-static-top">
+  <nav style="background: #9999ff;" class="navbar navbar-fixedskin-top">
     <div class="container">
       <div class="navbar-header">
         <a style="font-size: 30px;" href="index.php" class="navbar-brand"><b style="color:red;">UNI</b>FRIGO</a>
@@ -101,7 +101,7 @@
             else{
               echo "
                 <li><a href='login.php'>LOGIN</a></li>
-                <li><a href='signup.php'>SIGNUP</a></li>
+                <!---li><a href='signup.php'>SIGNUP disabled for now - ad</a></li-->
               ";
             }
           ?>
